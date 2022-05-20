@@ -1,0 +1,6 @@
+gubi
+f211Dcrq6Vn3g7Jc
+mongodb+srv://<username>:<password>@cluster0.ofgjo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+dbUrlCovid
+api-vacunacion
+qaTwwuJnyPRsx6ns
