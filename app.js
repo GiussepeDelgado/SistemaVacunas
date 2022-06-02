@@ -20,12 +20,6 @@ app.use(cookieParser());
 console.log(process.env.PORT);
 app.use('/', require('./routes/router'));
 
-// app.use((req, res, next) => {
-//   if (!req.user) {
-//     res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
-//   } next
-// });
-
 
 app.listen(port, () => {
   console.log('SERVER UP runnung in http://localhost:'+port)
