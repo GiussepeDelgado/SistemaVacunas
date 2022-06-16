@@ -7,16 +7,14 @@
   <nav class="nav">
     <div class="user">
       <div class="user__photo">
-        <div class="user__photo__img">
-          
-        </div>
+        <img class="user__photo__img" src="<%=user.photo%>">
       </div>
       <div class="user__detail">
         <div class="user__detail__name">
-          <spam>Julian Alvarez</spam>
+          <spam><%=user.name%></spam>
         </div>
         <div class="user__detail__access">
-          <spam>Administrador</spam>
+          <spam><%=user.access%></spam>
         </div>
       </div>
     </div>
@@ -26,7 +24,7 @@
         <a href="/registro-empleado"><li class="item">Registro de empleados</li></a>
         <a href="/lista-empleados"><li class="item">Lista de trabajadores</li></a>
         <a href="/lista-usuarios"><li class="item">Lista de usuarios</li></a>
-        <a href="#"><li class="item">Cerrar sesión</li></a>
+        <a href="logout"><li class="item">Cerrar sesión</li></a>
       </ul>
     </div>
     
