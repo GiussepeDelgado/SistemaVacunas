@@ -1,0 +1,6 @@
+$color-base:#FFFFFF;
+$color-hover:#EDEDED;
+$color-main:#FAFAFA;
+@mixin transition-ease($time) {
+  transition: all $time ease-in-out;
+}

@@ -1,0 +1,105 @@
+body{
+  display:grid;
+  grid-template-columns: 250px auto;
+  grid-template-rows: 50px auto;
+  width:100wh;
+  //position:relative;
+  .header{
+    position:fixed;
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow: 2px 0px 10px 1px rgba(0, 0, 0, 0.2);
+    background:$color-base;
+    &__title{
+      font-size:1.3rem;
+
+    }
+  }
+  .nav{
+    position:fixed;
+    margin-top:50px;
+    width:250px;
+    height:calc(100vh - 50px);
+    .user{
+      width:100%;
+      height:100px;
+      display:flex;
+      border-bottom:1px solid $color-main;
+      //background:green;
+      &__photo{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100px;
+        width:100px;
+        &__img{
+          background:url(../assets/photo.jfif);
+          background-size:cover;
+          height:60px;
+          width:60px;
+          border-radius:50%;  
+        }
+      }
+      &__detail{
+        height:100px;
+        width:150px;
+        display:flex;
+        justify-content:center;
+        //align-items:center;
+        flex-direction: column;
+        &__name{
+          spam{
+            padding-left:10px;
+            font-size:18px;
+          }
+        }
+        &__access{
+          
+          spam{
+            padding-left:25px;
+            font-size:12px;
+          }
+        }
+      }
+    }
+    .navi{
+      width:100%;
+      height:calc(100% - 100px);
+      &__ul{
+        padding:0;
+        a{
+          text-decoration: none;
+          color:black;
+          .item{
+            display:flex;
+            padding-left:35px;
+            align-items:center;  
+            list-style:none;
+            height:40px;
+            background:$color-base;
+            @include transition-ease(0.5s);
+            
+            &:hover{
+              background:$color-hover;
+              font-size:15px;
+            }
+          }
+        }
+        
+      }
+    }
+  }
+  .main{
+    background:$color-main;
+    grid-column:2/3;
+    grid-row:2/3;
+    width:100%;
+    height:1000px;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+  }
+}

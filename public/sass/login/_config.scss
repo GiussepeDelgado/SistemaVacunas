@@ -1,0 +1,5 @@
+$section-color:#FAFAFA;
+
+@mixin transition-ease($time) {
+  transition: all $time ease-in-out;
+}

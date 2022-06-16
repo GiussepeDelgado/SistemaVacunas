@@ -1,0 +1,54 @@
+.section-home {
+  width: 90%;
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.section-home h1 {
+  font-size: 25px;
+}
+.section-home .card-1 {
+  margin: 10px 0px;
+  height: 150px;
+  color: azure;
+  border-radius: 5px;
+  background-color: #188754;
+}
+.section-home .card-1 h2 {
+  margin: 15px 0 0 30px;
+  font-size: 20px;
+}
+.section-home .card-1 p {
+  margin: 25px 0 0 30px;
+}
+.section-home .card-2 {
+  margin: 10px 0px;
+  height: 150px;
+  color: azure;
+  border-radius: 5px;
+  background-color: #F0B300;
+}
+.section-home .card-2 h2 {
+  margin: 15px 0 0 30px;
+  font-size: 20px;
+}
+.section-home .card-2 p {
+  margin: 25px 0 0 30px;
+}
+.section-home .card-3 {
+  margin: 10px 0px;
+  height: 150px;
+  color: azure;
+  border-radius: 5px;
+  background-color: #DC3546;
+}
+.section-home .card-3 h2 {
+  margin: 15px 0 0 30px;
+  font-size: 20px;
+}
+.section-home .card-3 p {
+  margin: 25px 0 0 30px;
+}
+
+/*# sourceMappingURL=home.css.map */

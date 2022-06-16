@@ -1,0 +1,55 @@
+.section-home{
+  width: 90%;
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  h1{
+    font-size: 25px;
+  }
+  .card-1{
+    margin: 10px 0px;
+    height: 150px;
+    color: azure;
+    border-radius: 5px;
+    background-color: $color-card-1;
+    
+    h2{
+      margin:15px 0 0 30px;
+      font-size: 20px;
+    }
+    p{
+      margin:25px 0 0 30px;
+    }
+  }
+  .card-2{
+    margin: 10px 0px;
+    height: 150px;
+    color: azure;
+    border-radius: 5px;
+    background-color: $color-card-2;
+    
+    h2{
+      margin:15px 0 0 30px;
+      font-size: 20px;
+    }
+    p{
+      margin:25px 0 0 30px;
+    }
+  }
+  .card-3{
+    margin: 10px 0px;
+    height: 150px;
+    color: azure;
+    border-radius: 5px;
+    background-color: $color-card-3;
+    
+    h2{
+      margin:15px 0 0 30px;
+      font-size: 20px;
+    }
+    p{
+      margin:25px 0 0 30px;
+    }
+  }
+}

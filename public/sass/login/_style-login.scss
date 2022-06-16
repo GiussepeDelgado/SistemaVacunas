@@ -1,0 +1,39 @@
+.login-main{
+  display:grid;
+  grid-template-columns:40vw 60vw;
+  grid-template-rows:100vh;
+  &__form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    .box-form{
+      width:400px;
+      height:60vh;
+      span{
+        font-size:15px;
+      }
+      form{
+        margin-top:15px;
+        button{
+          width:100%
+        }
+      }
+      .message{
+        margin-top:20px;
+        display:flex;
+        justify-content:center;
+        
+      }
+
+      //background:blue;
+    }
+  }
+  &__figure{
+    height:100vh;
+    overflow:hidden;
+    .image{
+      height:100%;
+    }
+    
+  }
+}

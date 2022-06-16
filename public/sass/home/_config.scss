@@ -1,0 +1,6 @@
+$color-card-1:#188754;
+$color-card-2:#F0B300;
+$color-card-3:#DC3546;
+@mixin transition-ease($time) {
+  transition: all $time ease-in-out;
+}

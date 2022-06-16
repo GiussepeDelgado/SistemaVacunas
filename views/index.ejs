@@ -1,49 +1,22 @@
 <%- include("partials/header") %>
-
-
-  <% if (flag) { %>
-    <h2 style="margin-left: 100px;">Editar Area</h2>
-    <div class="p-5" style="display:flex;justify-content: center;">
-      <form id="formArea" action="/areas/edit/<%= area._id %>" method="POST" style="width:500px;">
-        <div class="mb-3">
-          <label for="name" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" placeholder="nombre" name="name" value="<%= area.name %>">
-        </div>
-        <div class="mb-3">
-          <label for="siglas" class="form-label">Siglas</label>
-          <input type="text" class="form-control" id="siglas" placeholder="Siglas" name="siglas"
-            value="<%= area.siglas %>">
-        </div>
-        <div class="mb-3">
-          <label for="status" class="form-label">Estado</label>
-          <input type="text" class="form-control" id="status" placeholder="Estado" name="status"
-            value="<%= area.status %>">
-        </div>
-        <button class="mt-4 btn btn-lg btn-warning " type="submit">Editar</button>
-
-      </form>
-    </div>
-  <% } else{%>
-      <h2 style="margin-left: 100px;">Crear Area</h2>
-      <div class="p-5" style="display:flex;justify-content: center;">
-        <form id="formArea" action="/agregar" method="POST" style="width:500px;">
-          <div class="mb-3">
-            <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name" placeholder="nombre" name="name">
-          </div>
-          <div class="mb-3">
-            <label for="siglas" class="form-label">Siglas</label>
-            <input type="text" class="form-control" id="siglas" placeholder="Siglas" name="siglas">
-          </div>
-          <div class="mb-3">
-            <label for="status" class="form-label">Estado</label>
-            <input type="text" class="form-control" id="status" placeholder="Estado" name="status">
-          </div>
-          <button class="mt-4 btn btn-lg btn-dark " type="submit">Ingresar</button>
-
-        </form>
-      </div>
-  <% } %>
+<link href="css/home.css" rel="stylesheet">
+<%- include("partials/body") %>
+  
+  <section class="section-home">
+    <h1>Resumen de trabajadores</h1>
+    <article class="card-1">
+      <h2>Trabajadores con 3 dosis</h2>
+      <p>Tienes registrado a 34 trabajadores con 3 dosis</p>
+    </article>
+    <article class="card-2">
+      <h2>Trabajadores con 2 dosis</h2>
+      <p>Tienes registrado a 221 trabajadores con 2 dosis</p>
+    </article>
+    <article class="card-3">
+      <h2>Trabajadores con 1 dosis</h2>
+      <p>Tienes registrado a 13 trabajadores con 1 o ninguna dosis</p>
+    </article>
+  </section>
 
 
 <%- include("partials/footer") %>

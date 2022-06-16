@@ -1,0 +1,73 @@
+.login-main {
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+  grid-template-rows: 100vh;
+}
+.login-main__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-main__form .box-form {
+  width: 400px;
+  height: 60vh;
+}
+.login-main__form .box-form span {
+  font-size: 15px;
+}
+.login-main__form .box-form form {
+  margin-top: 15px;
+}
+.login-main__form .box-form form button {
+  width: 100%;
+}
+.login-main__form .box-form .message {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.login-main__figure {
+  height: 100vh;
+  overflow: hidden;
+}
+.login-main__figure .image {
+  height: 100%;
+}
+
+.login-main {
+  display: grid;
+  grid-template-columns: 40vw 60vw;
+  grid-template-rows: 100vh;
+}
+.login-main__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-main__form .box-form {
+  width: 400px;
+  height: 60vh;
+}
+.login-main__form .box-form span {
+  font-size: 15px;
+}
+.login-main__form .box-form form {
+  margin-top: 15px;
+}
+.login-main__form .box-form form button {
+  width: 100%;
+}
+.login-main__form .box-form .message {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.login-main__figure {
+  height: 100vh;
+  overflow: hidden;
+}
+.login-main__figure .image {
+  height: 100%;
+}
+
+/*# sourceMappingURL=login.css.map */

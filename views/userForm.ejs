@@ -1,0 +1,96 @@
+<%- include("partials/header") %>
+<link href="css/main-user.css" rel="stylesheet">
+<%- include("partials/body") %>
+
+  
+<div class="block">
+  <div class="block__title">
+      <h1>Crear usuario</h1>
+  </div>
+
+  <div class="block__form">
+      <form id="form" class="row" action="/register-user" method="POST" enctype="multipart/form-data">
+          <div class="avatar-upload" id="g__imgPerf">
+              <div class="avatar-edit ">
+                  <input type="file" id="imageUpload" name="imageUpload" accept=".png, .jpg, .jpeg, .jfif" />
+                  <label for="imageUpload"></label>
+              </div>
+              <div class="avatar-preview">
+                  <div id="imagePreview" class="imgPreview"></div>
+              </div>
+              <p class="form__input-error">Sube tu foto de perfil.</p>
+          </div>
+          <div class="row labels col-md-6 col-12">
+              <div class="col-md-10">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="name" class="form-control" id="name" name="name">
+                  <div id="alert__name" class="alertss">
+                      <span>Debe tener como maximo 10 caracteres.</span>
+                  </div>
+              </div>
+
+              <div class="col-md-10">
+                  <label for="email" class="form-label">Correo electronico</label>
+                  <input type="email" class="form-control" id="email" name="email">
+                  <div id="alert__email" class="alertss">
+                      <span>Debe ser un correo valido.</span>
+                  </div>
+              </div>
+              <div class="col-md-10">
+                  <label for="pass" class="form-label">Contraseña</label>
+                  <input type="password" class="form-control" id="pass" name="pass">
+                  <div id="alert__pass" class="alertss">
+                      <span>Debe tener 1 letra minúscula, 1 letra mayúscula, 1 número y tener al menos 8 caracteres!</span>
+                  </div>
+              </div>
+              <div class="col-md-10">
+                  <label for="passconf" class="form-label">Repetir contraseña</label>
+                  <input type="password" class="form-control " id="passconf" name="passconf">
+                  <div id="alert__passconf" class="alertss">
+                      <span>Debe coincidir las contraseñas.</span>
+                  </div>
+              </div>
+
+              <div class="col-md-10 mt-2">
+                  <label class="visually-hidden" for="access">Tipo de usuario</label>
+                  <select class="form-select" id="access" name="access">
+                    <option selected>Selecciona tipo de usuario...</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Encargado de area">Encargado de area</option>
+                    <option value="Empleado general">Empleado general</option>
+                  </select>
+                  <div id="alert__access" class="alertss">
+                      <span>Selecciona un tipo de acceso.</span>
+                  </div>
+              </div>
+              
+
+          </div>
+          <div class="block__form__btns">
+              <a href="/lista-usuarios" class="btn btn-danger">Cancelar</a>
+
+              <button type="submit" class="btn btn-success">Registrar</button>
+          </div>
+      </form>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/userform.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<% if(alert) { %>
+  <script>
+      Swal.fire({
+          title: '<%= alertTitle %>',
+          text: '<%= alertMessage %>',
+          icon: '<%= alertIcon %>',
+          showConfirmButton: <%= showConfirmButton %>,
+          timer: <%= timer %>
+      }).then(() => {
+          window.location = '/<%= ruta %>'
+      })
+  </script>
+  <% } %>
+
+<%- include("partials/footer") %>
