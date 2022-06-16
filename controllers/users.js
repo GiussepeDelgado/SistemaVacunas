@@ -7,13 +7,18 @@ const User = require('../models/db/User');
 exports.readUsersData = async (req, res) => {
 
 
-  results = [{
-    idUser: '1',
-    name: 'Julian Alvarez',
-    email: 'julian.alvarez@intercorp.com',
-    access: 'Admnistrador'
-  }];
+  // results = [{
+  //   idUser: '1',
+  //   name: 'Julian Alvarez',
+  //   email: 'julian.alvarez@intercorp.com',
+  //   access: 'Admnistrador'
+  // }];
+  const results = await User.find().lean();
   //pass:Codigomorse01
+  for (let i = 0; i < results.length; i++) {
+    results[i].order=i+1;
+    
+  }
   data = JSON.stringify(results);
   res.send(data);
 
@@ -21,10 +26,11 @@ exports.readUsersData = async (req, res) => {
 
 exports.register = async (req, res) => {
   try {
-    //const { email, user } = req.body;
+    const { email, user } = req.body;
     //trae data de la base de datos a result
     //results.length == 0 || !(email === results[0].email && '1' === active
-    if (true) {
+    const results = await User.find({ email: email }).lean();
+    if (results.length == 0||!(email === results[0].email)) {
       saveUser(req, res);
       res.render('userForm', {
         alert: true,
@@ -34,7 +40,7 @@ exports.register = async (req, res) => {
         showConfirmButton: false,
         timer: 2000,
         ruta: 'lista-usuarios',
-        //user: user
+        user: user
       });
     } else {
       res.render('userForm', {
@@ -44,8 +50,8 @@ exports.register = async (req, res) => {
         alertIcon: 'info',
         showConfirmButton: true,
         timer: 2000,
-        ruta: 'userform',
-        //user: user
+        ruta: 'crear-usuario',
+        user: user
       });
     }
 

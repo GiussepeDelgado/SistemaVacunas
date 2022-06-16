@@ -23,7 +23,9 @@
         <a href="/"><li class="item">Inicio</li></a>
         <a href="/registro-empleado"><li class="item">Registro de empleados</li></a>
         <a href="/lista-empleados"><li class="item">Lista de trabajadores</li></a>
+        <% if (user.access=='Administrador') { %>
         <a href="/lista-usuarios"><li class="item">Lista de usuarios</li></a>
+        <% } %>
         <a href="logout"><li class="item">Cerrar sesión</li></a>
       </ul>
     </div>

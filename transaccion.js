@@ -24,7 +24,7 @@ async function main() {
      
       session.commitTransaction();
       
-      //session.endSession();
+      session.endSession();
       
       // Make the appropriate DB calls
 
